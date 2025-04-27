@@ -1,44 +1,6 @@
 [
   {
     "type": "container",
-    "title": "Radarr",
-    "description": "Radarr - Movies collection manager",
-    "image": "lscr.io/linuxserver/radarr:latest",
-    "ports": [
-      "7878:7878"
-    ],
-    "volumes": [
-      {
-        "container": "/config",
-        "bind": "/home/smaluish/docker/radarr/config"
-      },
-      {
-        "container": "/movies",
-        "bind": "/home/smaluish/docker/radarr/movies"
-      },
-      {
-        "container": "/downloads",
-        "bind": "/home/smaluish/docker/radarr/downloads"
-      }
-    ],
-    "env": [
-      {
-        "name": "PUID",
-        "default": "1000"
-      },
-      {
-        "name": "PGID",
-        "default": "1000"
-      },
-      {
-        "name": "TZ",
-        "default": "Australia/Perth"
-      }
-    ],
-    "restart_policy": "unless-stopped"
-  },
-  {
-    "type": "container",
     "title": "Homarr",
     "description": "Homarr - A simple and elegant dashboard for your server apps",
     "image": "ghcr.io/ajnart/homarr:latest",
@@ -73,6 +35,8 @@
         "default": "Australia/Perth"
       }
     ],
-    "restart_policy": "unless-stopped"
+    "restart_policy": "unless-stopped",
+    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Logos/homarr.png"
   }
 ]
+
