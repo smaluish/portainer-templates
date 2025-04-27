@@ -1133,11 +1133,11 @@
       "type": 1,
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/Homer/assets",
+          "bind": "/home/smaluish/docker/Homer/AppData/Config/assets",
           "container": "/www/assets"
         },
         {
-          "bind": "/portainer/Files/AppData/Config/Homer",
+          "bind": "/home/smaluish/docker/Homer/AppData/Config",
           "container": "/www/config.yml"
         }
       ]
