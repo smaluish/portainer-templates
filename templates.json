@@ -4,17 +4,36 @@
     "title": "Radarr",
     "description": "Radarr - Movies collection manager",
     "image": "lscr.io/linuxserver/radarr:latest",
-    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/radarr-icon.png",
-    "ports": ["7878:7878"],
+    "ports": [
+      "7878:7878"
+    ],
     "volumes": [
-      { "container": "/config", "bind": "/home/smaluish/docker/radarr/config" },
-      { "container": "/movies", "bind": "/home/smaluish/docker/radarr/movies" },
-      { "container": "/downloads", "bind": "/home/smaluish/docker/radarr/downloads" }
+      {
+        "container": "/config",
+        "bind": "/home/smaluish/docker/radarr/config"
+      },
+      {
+        "container": "/movies",
+        "bind": "/home/smaluish/docker/radarr/movies"
+      },
+      {
+        "container": "/downloads",
+        "bind": "/home/smaluish/docker/radarr/downloads"
+      }
     ],
     "env": [
-      { "name": "PUID", "default": "1000" },
-      { "name": "PGID", "default": "1000" },
-      { "name": "TZ", "default": "Australia/Perth" }
+      {
+        "name": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "default": "1000"
+      },
+      {
+        "name": "TZ",
+        "default": "Australia/Perth"
+      }
     ],
     "restart_policy": "unless-stopped"
   },
@@ -23,19 +42,37 @@
     "title": "Homarr",
     "description": "Homarr - A simple and elegant dashboard for your server apps",
     "image": "ghcr.io/ajnart/homarr:latest",
-    "logo": "https://raw.githubusercontent.com/ajnart/homarr/main/public/icon.png",
-    "ports": ["7575:7575"],
+    "ports": [
+      "7575:7575"
+    ],
     "volumes": [
-      { "container": "/app/data/configs", "bind": "/home/smaluish/docker/homarr/configs" },
-      { "container": "/app/data/icons", "bind": "/home/smaluish/docker/homarr/icons" },
-      { "container": "/app/public/icons", "bind": "/home/smaluish/docker/homarr/public-icons" }
+      {
+        "container": "/app/data/configs",
+        "bind": "/home/smaluish/docker/homarr/configs"
+      },
+      {
+        "container": "/app/data/icons",
+        "bind": "/home/smaluish/docker/homarr/icons"
+      },
+      {
+        "container": "/app/public/icons",
+        "bind": "/home/smaluish/docker/homarr/public-icons"
+      }
     ],
     "env": [
-      { "name": "PUID", "default": "1000" },
-      { "name": "PGID", "default": "1000" },
-      { "name": "TZ", "default": "Australia/Perth" }
+      {
+        "name": "PUID",
+        "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "default": "1000"
+      },
+      {
+        "name": "TZ",
+        "default": "Australia/Perth"
+      }
     ],
     "restart_policy": "unless-stopped"
   }
 ]
-
